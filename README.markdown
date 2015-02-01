@@ -1,7 +1,7 @@
 # fj-or
 
 [![Build Status](https://travis-ci.org/fp-js/fj-or.svg)](https://travis-ci.org/fp-js/fj-or) [![npm version](https://badge.fury.io/js/fj-or.svg)](http://badge.fury.io/js/fj-or)
-> x && y
+> x || y
 
 ## Installation
 
