@@ -17,7 +17,8 @@ let F = () => false;
 
 or(T, T)()); // => true
 or(T)(T)()); // => true
-or(T, F)()); // => false
+or(T, F)()); // => true
+or(F, T)()); // => true
 or(F, F)()); // => false
 or(F, F)()); // => false
 ```
