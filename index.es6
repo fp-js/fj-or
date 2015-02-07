@@ -1,11 +1,10 @@
 import { curry2 } from 'fj-curry';
 
 
-function _or(x, y) {
-  return () => {
-    return x() || y();
-  };
-}
+let _or = (x, y) =>
+  (...args) =>
+    x.apply(null,args) || y.apply(null,args);
+
 
 let or  = curry2(_or);
 

@@ -10,7 +10,7 @@ var or = _interopRequire(require("./"));
 
 
 test("fj-or", function (t) {
-  t.plan(6);
+  t.plan(8);
 
   var T = function () {
     return true;
@@ -18,7 +18,15 @@ test("fj-or", function (t) {
   var F = function () {
     return false;
   };
+  var isF = function (x) {
+    return x === false;
+  };
+  var isT = function (x) {
+    return x === true;
+  };
 
+  t.ok(or(isF, isT)(true));
+  t.notOk(or(isF, isF)(true));
   t.ok(or(T, T)());
   t.ok(or(T)(T)());
   t.ok(or(T, F)());
